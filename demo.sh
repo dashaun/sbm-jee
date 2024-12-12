@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
-
+vendir sync
 . vendir/demo-magic/demo-magic.sh
 export TYPE_SPEED=100
 export DEMO_PROMPT="${GREEN}➜ ${CYAN}\W ${COLOR_RESET}"
-export PROMPT_TIMEOUT=5
+#export PROMPT_TIMEOUT=5
 export JAVA_8=8.0.432-librca
 export JAVA_17=17.0.13-librca
 

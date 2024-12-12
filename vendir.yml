@@ -16,7 +16,6 @@ directories:
       - path: .
         githubRelease:
           slug: spring-projects-experimental/spring-boot-migrator
-#          tag: v0.15.0
-          latest: true
-          assetNames: [ "spring-boot*.jar" ]
+          tag: 0.15.0
+          assetNames: [ "spring-boot-migrator.jar" ]
           disableAutoChecksumValidation: true

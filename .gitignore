@@ -3,5 +3,6 @@
 upgrade-example
 .rewrite-cache
 spring-boot-migrator.log
+spring-boot-migrator.jar
 vendir
 vendir.lock.yml

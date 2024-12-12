@@ -1,14 +1,11 @@
 #!/usr/bin/env bash
 
-#set -x
-
-. ./helper.sh
+. vendir/demo-magic/demo-magic.sh
 export TYPE_SPEED=100
 export DEMO_PROMPT="${GREEN}➜ ${CYAN}\W ${COLOR_RESET}"
-TEMP_DIR=upgrade-example
-PROMPT_TIMEOUT=5
-JAVA_8=8.0.422-librca
-JAVA_17=17.0.12-librca
+export PROMPT_TIMEOUT=5
+export JAVA_8=8.0.432-librca
+export JAVA_17=17.0.13-librca
 
 function talkingPoint() {
   wait
@@ -22,14 +19,13 @@ function initSDKman() {
       echo "SDKMAN_DIR is not set, using default location"
   	  source "$HOME/.sdkman/bin/sdkman-init.sh"  
 	fi
-	sdk install java $JAVA_8
-  sdk install java $JAVA_17
+	sdk env install
 }
 
 function init {
-  rm -rf $TEMP_DIR
-  mkdir $TEMP_DIR
-  cd $TEMP_DIR || exit
+  rm -rf upgrade-example
+  mkdir upgrade-example
+  cd upgrade-example || exit
   clear
 }
 
@@ -45,7 +41,10 @@ function useJava17 {
 }
 
 function SBMapply {
-  pei "cd ../ && java -Dsbm.gitSupportEnabled=false -jar spring-boot-migrator.jar @apply.txt"
+  pei "cd .."
+  pei "pwd"
+  pei "cp ./vendir/sprint-boot-migrator/spring-boot-migrator.jar  ./"
+  pei "java -Dsbm.gitSupportEnabled=false -jar spring-boot-migrator.jar @apply.txt"
 }
 
 function log {

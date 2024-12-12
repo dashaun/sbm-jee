@@ -11,3 +11,12 @@ directories:
           depth: 1
           url: https://github.com/paxtonhare/demo-magic.git
           ref: master
+  - path: vendir/sprint-boot-migrator
+    contents:
+      - path: .
+        githubRelease:
+          slug: spring-projects-experimental/spring-boot-migrator
+#          tag: v0.15.0
+          latest: true
+          assetNames: [ "spring-boot*.jar" ]
+          disableAutoChecksumValidation: true

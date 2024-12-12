@@ -1,0 +1,10 @@
+scan upgrade-example
+apply initialize-spring-boot-migration
+apply migrate-jpa-to-spring-boot
+apply migrate-ejb-jar-deployment-descriptor
+apply migrate-weblogic-ejb-deployment-descriptor
+apply migrate-stateless-ejb
+apply migrate-annotated-servlets
+apply migrate-jax-rs
+apply migrate-jms
+

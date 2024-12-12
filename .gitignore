@@ -1,0 +1,7 @@
+.idea
+.envrc
+upgrade-example
+.rewrite-cache
+spring-boot-migrator.log
+vendir
+vendir.lock.yml
